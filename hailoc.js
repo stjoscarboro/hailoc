@@ -2,6 +2,7 @@ let app = angular.module('hailoc', []);
 
 app.controller("hailocCtrl", ['$scope', ($scope) => {
 
+    const total = 240;
     const filter = [
         '004', '007', '010', '011', '012', '013', '015', '017', '022', '023',
         '024', '025', '029', '030', '036', '040', '041', '051', '056', '060',
@@ -21,8 +22,7 @@ app.controller("hailocCtrl", ['$scope', ($scope) => {
     };
 
     $scope.next = () => {
-        let total = 240,
-            number = Math.floor(Math.random() * Math.floor(total)) + 1,
+        let number = Math.floor(Math.random() * Math.floor(total)) + 1,
             image = number < 10 ? `00${number}` : number < 100 ? `0${number}` : `${number}`;
 
         console.log(image);
