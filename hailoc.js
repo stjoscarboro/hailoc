@@ -33,5 +33,5 @@ const app = angular.module('hailoc', []);
     };
 
     controller.$inject = ['$scope'];
-    app.controller("hailoc", controller());
+    app.controller("hailoc", controller);
 })();
